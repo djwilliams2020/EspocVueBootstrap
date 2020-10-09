@@ -2,7 +2,7 @@ let vm = new Vue({
     el: '#app',
     data: {
         instruction1: 'Click on the symbol below the card to guess the next image.',
-        instruction2: 'If you score 5 out of 10, then you win ESP',
+        instruction2: 'If you score 3 out of 10, then you win ESP',
         header1: 'The',
         header2: 'Guessing Game',
         back: 'images/back.svg',
