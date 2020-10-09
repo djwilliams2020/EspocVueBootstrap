@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenner Card Game Vue Edition</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+      integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+      crossorigin="anonymous"
+    />
+    <link rel=" shortcut icon" type="image/png" href="images/back.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="light-body-mode">
+    <div id="app">
+      <div class="container-fluid" v-bind:class="{darkBlock:isDark}">
+        <div class="col-12">
+          <h1>
+            {{header1}}
+            <transition name="spin" appear>
+              <span style="display: inline-block">{{header2}}</span>
+            </transition>
+          </h1>
+        </div>
+        <div class="instructions">{{instruction1}}{{instruction2}}</div>
+
+        <div name="cf2" id="cf2">
+          <div id="toogleMSg">{{toogleMsg}}</div>
+          <img class="bottom" @click="switchIsDark" src="images/sun.png" />
+          <img class="top" @click="switchIsDark" src="images/moon.png" />
+        </div>
+        <h6 id="ScoreCard">
+          <div id="Score">Score: 0</div>
+          <div id="Guess">Guess: 10</div>
+        </h6>
+        <div class="img-fluid" id="card">
+          <img id="mainCard" :src="back" />
+        </div>
+
+        <div class="guessing" v-for="image of images">
+          <img
+            :src="image.imgSrc"
+            :id="image.id"
+            class="choice"
+            @click="userChoice"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+      integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="vueApp.js"></script>
+  </body>
+</html>

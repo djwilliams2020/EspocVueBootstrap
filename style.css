@@ -1,0 +1,159 @@
+.container-fluid {
+  margin: auto;
+  width: 80%;
+  border: 3px solid #73ad21;
+  padding: 5px;
+  text-align: center;
+  background-color: aquamarine;
+  border-radius: 20px;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0 0 3px #ff0000;
+  font-size: 35px;
+  padding: 7px;
+}
+.instructions {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+#mainCard {
+  width: 20%;
+  padding-bottom: 20px;
+}
+.cards {
+  display: inline-block;
+}
+#toogleMSg {
+  font-size: 10px;
+  font-weight: bold;
+  text-shadow: 0 0 3px yellow;
+}
+#ScoreCard {
+  padding-top: 65px;
+}
+.guessing {
+  display: inline-block;
+  padding: 3px;
+  width: 10%;
+}
+
+img {
+  border: 0 none;
+  display: inline-block;
+  height: auto;
+  max-width: 50%;
+  vertical-align: middle;
+}
+
+.darkBlock {
+  margin: auto;
+  width: 70%;
+  height: 100%;
+  background-color: #282828;
+  border: 3px solid #73ad21;
+  color: white;
+  border: 2px solid pink;
+  border-radius: 20px;
+}
+
+.spin-enter-active {
+  animation: spin-steps 2s;
+}
+@keyframes spin-steps {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(10) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(1080deg);
+  }
+}
+
+.setShake {
+  animation: shake 0.2s;
+  animation-iteration-count: 4;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .setShake {
+    animation: none;
+  }
+  .glowCard {
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+}
+
+#cf2 img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px; /* Need a specific value to work */
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf2 img.transparent {
+  opacity: 0;
+}
+#cf_onclick {
+  cursor: pointer;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+      0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    /* text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    /* text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+  }
+}
